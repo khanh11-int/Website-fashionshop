@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Đặt hàng thành công</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      text-align: center;
+      padding-top: 100px;
+      color: #5c3d2e;
+    }
+    h1 {
+      font-size: 28px;
+    }
+    a {
+      color: #a47148;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎉 Cảm ơn bạn đã đặt hàng!</h1>
+  <p>Chúng tôi sẽ xử lý đơn hàng trong thời gian sớm nhất.</p>
+  <p><a href="Taibel.html">← Quay lại trang chủ</a></p>
+  <script>
+    // Tạo đơn hàng mới
+const newOrder = {
+  id: Date.now(), // Mã đơn hàng duy nhất
+  date: new Date().toLocaleDateString('vi-VN'),
+  total: document.querySelector('.js_checkout_total_money').textContent,
+  status: 'Đang xử lý',
+  items: [...cart] // Bạn có thể lưu chi tiết sản phẩm ở đây nếu muốn
+};
+
+// Lấy danh sách đơn hàng cũ từ localStorage
+const existingOrders = JSON.parse(localStorage.getItem('orders')) || [];
+
+// Thêm đơn hàng mới vào danh sách
+existingOrders.push(newOrder);
+
+// Lưu lại vào localStorage
+localStorage.setItem('orders', JSON.stringify(existingOrders));
+
+  </script>
+</body>
+</html>

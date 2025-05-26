@@ -1,0 +1,127 @@
+.footer{
+  background-color: rgb(231, 225, 213);
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: auto;
+  justify-items: center;  
+}
+.footer_left{
+  color: black;
+  padding-left: 12%;
+}
+
+.footer_middle{
+  color: black;
+}
+
+.footer_right{
+  color: black;
+  padding-right: 12%;
+}
+
+.introduce{
+  color: black;
+  font-size: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.connection, .payment{
+  color: black;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  
+}
+.payment{
+  margin-left: 15px;
+}
+
+.icon_connection{
+  color: black;
+  font-size: 15px;
+  margin-top: 10px;
+  margin-right: 10px;
+  border: 1px solid black;
+  border-radius: 100px;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.icon_connection:hover{
+  background-color: white;
+  color: black;
+  transition: all 0.2s ease-in-out;
+}
+
+.icon_youtube{
+  padding: 10px 9px;
+}
+
+.icon_instagram{
+  padding: 10px 11px;
+}
+
+.payment_icon{
+  width: 250px;
+  cursor: pointer;
+}
+
+.footer_right, p{
+  font-family: arial;
+}
+.image_logo{
+  width: 170px;
+  cursor: pointer;
+}
+.footer_left{
+  font-family:Montserrat, sans-serif;
+}
+
+
+@media screen and (max-width: 866px) {
+  .footer{
+    display: grid;
+    grid-template-columns: auto 1fr 1fr;
+    justify-items: normal;  
+  }
+  .footer_left{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    padding-left: 8%;
+    padding-right: 5%;
+  }
+  .footer_middle{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    padding-left: 17%;
+  }
+  .footer_right{
+    padding-right: 0%;
+  }
+}
+@media screen and (max-width: 616px) {
+  .footer{
+    display: grid;
+    grid-template-columns: auto 1fr 1fr;
+    justify-items: normal;  
+  }
+  .footer_left{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    padding-left: 8%;
+    padding-right: 10%;
+  }
+  .footer_middle{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    padding-left: 8%;
+  }
+  .footer_right{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    padding-left: 5%;
+  }
+}

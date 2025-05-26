@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
+    <title>Admin</title>
+</head>
+<body>
+    <section class="admin-content">
+        <div class="container">
+            <div class="row-grid">
+                <div class="admin-conten-sidebar">
+                    <div class="admin-logo">
+                        <a href="quantri.html"><img src="..\image\logo.webp" alt=""></a>
+                    </div>
+                    <div class="admin-sidebbar">
+                        <ul>
+                            <li>
+                                <a href="#">Danh Mục<i class="ri-add-box-line"></i></a>
+                                <ul>
+                                    <div class="menu-sub-wraper">
+                                        <li><a href="#"><i class="ri-arrow-drop-right-fill"></i>Thêm Danh Mục</a></li>
+                                        <li><a href="#"><i class="ri-arrow-drop-right-fill"></i>Danh Sách Danh Mục</a></li>
+                                    </div>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Sản Phẩm<i class="ri-add-box-line"></i></a>
+                                <ul>
+                                    <div class="menu-sub-wraper">
+                                        <li><a href="product_add.html"><i class="ri-arrow-drop-right-fill"></i>Thêm Sản Phẩm</a></li>
+                                        <li><a href="product_list.html"><i class="ri-arrow-drop-right-fill"></i>Danh Sách Sản Phẩm</a></li>
+                                    </div>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="admin-conten-main">
+                    <div class="admin-content-main-title">
+                        <h1>Thêm Sản Phẩm Mới</h1>
+                    </div>
+                    <div class="admin-content-main-input">
+                        <label for="productName">Tên Sản Phẩm:</label>
+                        <input type="text" id="productName" placeholder="Nhập tên sản phẩm" required>
+                        <label for="productPrice">Giá Sản Phẩm:</label>
+                        <input type="number" id="productPrice" placeholder="Nhập giá sản phẩm" required>
+                        <label for="productDescription">Mô tả Sản Phẩm:</label>
+                        <textarea id="productDescription" placeholder="Mô tả sản phẩm" rows="5"></textarea>
+                        <label for="productCategory">Danh mục:</label>
+                        <select id="productCategory">
+                            <option value="dam">Đầm</option>
+                            <option value="giay">Giày</option>
+                            <option value="ao">Áo</option>
+                            <option value="quan">Quần</option>
+                            <option value="chan_vay">Chân váy</option>
+                            <option value="set_do">Set đồ</option>
+                            </select>
+                    </div>
+                    <div class="admin-content-main-image">
+                        <label class="label-btn" for="imageInput"><i class="ri-folder-image-fill"></i>Ảnh Đại Diện</label>
+                        <input type="file" id="imageInput" accept="image/*" onchange="previewImage(event, 'image-preview')" required>
+                        <div class="image-show">
+                            <img id="image-preview" src="../image/placeholder.png" alt="Ảnh Đại Diện">
+                        </div>
+                    </div>
+                    <div class="admin-content-main-button">
+                        <button type="submit" id="addProductBtn">Thêm Sản Phẩm</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../scripts/main.js"></script>
+    <script type="module" src="../scripts/admin_product_add.js"></script>
+    <script>
+        document.getElementById('addProductBtn').addEventListener('click', () => {
+  const productName = document.getElementById('productName').value;
+  const productPrice = document.getElementById('productPrice').value;
+  const productDescription = document.getElementById('productDescription').value;
+  const productCategory = document.getElementById('productCategory').value;
+
+  const newProduct = {
+    id: crypto.randomUUID(),
+    name: productName,
+    price: parseFloat(productPrice),
+    description: productDescription,
+    category: productCategory,
+    image: '../path/to/image' // Thay đổi nếu cần.
+  };
+
+  // Lưu vào Local Storage
+  let products = JSON.parse(localStorage.getItem('products')) || [];
+  products.push(newProduct);
+  localStorage.setItem('products', JSON.stringify(products));
+
+  alert('Sản phẩm đã được thêm thành công!');
+  window.location.href = 'product_list.html'; // Quay lại danh sách sản phẩm.
+});
+
+
+
+    </script>
+</body>
+</html>

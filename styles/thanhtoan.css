@@ -1,0 +1,228 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+}
+
+.navbar {
+  background-color: rgb(231,225, 213);
+  color: rgb(101,67,33);
+  padding: 16px 24px;
+  font-size: 22px;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.container {
+  max-width: 960px;
+  margin: 30px auto;
+  background: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #4e342e; /* Nâu đậm nhẹ */
+  margin: 12px 0 8px;
+  padding: 0;
+  border-left: 3px solid #a47148;
+  padding-left: 10px;
+  line-height: 1.2;
+}
+
+
+
+.address, .payment-method, .product, .summary {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fafafa;
+  position: relative;
+}
+
+.change-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  color: rgb(133,94,66);
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+.change-btn:hover {
+  text-decoration: underline;
+}
+
+.address-form {
+  display: none;
+  margin-top: 20px;
+}
+.address-form input {
+  width: 100%;
+  padding: 10px 14px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+.address-form input:focus {
+  outline: none;
+  border-color: rgb(133,94,66);
+}
+.save-btn {
+  background-color: rgb(133,94,66);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.product-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.product-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-right: 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+.product-info {
+  flex-grow: 1;
+  color: #444;
+  font-size: 15px;
+}
+.product-price {
+  color: rgb(133,94,66);
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Phương thức thanh toán */
+.payment-method {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.payment-option {
+  display: flex;
+  align-items: center;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: border-color 0.3s, background-color 0.2s;
+}
+.payment-option:hover {
+  background-color: #fff4f1;
+  border-color: rgb(133,94,66);
+}
+.payment-option input[type="radio"] {
+  display: none;
+}
+.payment-option .option-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.payment-option img {
+  width: 32px;
+  height: 32px;
+}
+.payment-option span {
+  font-size: 16px;
+  color: #333;
+}
+.payment-option input[type="radio"]:checked + .option-content {
+  font-weight: bold;
+  position: relative;
+}
+.payment-option input[type="radio"]:checked + .option-content span {
+  color: rgb(133,94,66);
+}
+.payment-option input[type="radio"]:checked + .option-content::after {
+  content: "✓";
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgb(133,94,66);
+  color: white;
+  font-size: 12px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 20px;
+}
+
+/* Tóm tắt & Đặt hàng */
+.summary {
+  text-align: right;
+  font-size: 16px;
+}
+.summary .total {
+  font-weight: bold;
+  font-size: 22px;
+  color: rgb(133,94,66);
+  margin-top: 10px;
+}
+.order-btn {
+  background-color: rgb(133,94,66);
+  color: white;
+  padding: 14px 26px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.order-btn:hover {
+  background-color: rgb(101,67,33);
+}
+.checkout_product_item {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.checkout_product_item .product_image img {
+  width: 120px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

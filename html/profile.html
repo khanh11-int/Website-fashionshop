@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hồ Sơ Của Bạn</title>
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/general.css">
+    <link rel="stylesheet" href="../styles/profile.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="cosmetics_header">
+      <div class="left_header">
+        <a href="Taibel.html" class="logo_header"><img class="image_logo" src="../image/logo.webp"></a>
+       
+      </div>
+
+      <div class="middle_header"> 
+        <div class=" home_about">
+          <a style=" text-align: center;font-family:Arial, Helvetica, sans-serif; font-size: 20px;text-decoration:none;color:rgb(101, 67, 33)" 
+          href="Taibel.html" class="home_header">Trang chủ |</a>
+          <a style=" text-align: center;font-family:Arial, Helvetica, sans-serif; font-size: 20px;text-decoration:none;color:rgb(101, 67, 33)" 
+          href="comming_soon.html" class="about_header">Giới thiệu</a>
+        </div>
+        <input class="search_bar js_search_bar" placeholder="Tìm kiếm" type="text">
+        <button class="search_button js_search_button">Search</button>
+      </div>
+
+      <div class="right_header">
+        <div class=" login_register"> 
+        
+        <a style="text-decoration: none; color:rgb(101, 67, 33) ; font-size: 20px;" href="dangnhap.html" class="login_header">Đăng nhập |</a>
+        <a style="text-decoration: none; color:rgb(101, 67, 33) ; font-size: 20px;" href="dangky.html" class="register_header">Đăng ký</a>
+        
+        </div>
+        
+        <img class="icon_profile" src="../image/icons/8eaf3963-78fa-4d71-b6c0-a46e2c32b146.png" alt="Hồ sơ">
+
+        <div>
+          <a href="cart.html" title="Giỏ hàng của bạn">
+            <img class="icon_cart" src="../image/icons/shopping-cart.svg" alt="Giỏ hàng">
+          </a>
+          <span class="cart_quantity js_cart_quantity">0</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="main_profile_container">
+        <div class="profile_sidebar">
+            <div class="profile_avatar">
+                <img src="../image/bbb.png" alt="Ảnh đại diện"> <div class="profile_name">Tên Người Dùng</div>
+            </div>
+            <ul class="profile_menu">
+                <li class="active" data-section="info"><i class="fas fa-user"></i> Thông tin cá nhân</li>
+                <li data-section="orders"><i class="fas fa-box"></i> Đơn hàng của tôi</li>
+                <li data-section="settings"><i class="fas fa-cog"></i> Cài đặt tài khoản</li>
+                <li data-section="logout"><i class="fas fa-sign-out-alt"></i> Đăng xuất</li>
+            </ul>
+        </div>
+        <div class="profile_content">
+            <div id="info" class="profile_section active">
+                <h2>Thông tin cá nhân</h2>
+                <div class="profile_info_item">
+                    <label>Họ và tên:</label>
+                    <input type="text" value="tranbao" readonly>
+                </div>
+                <div class="profile_info_item">
+                    <label>Email:</label>
+                    <input type="email" value="tranbao180305@gmail.com" readonly>
+                </div>
+                <div class="profile_info_item">
+                    <label>Số điện thoại:</label>
+                    <input type="tel" value="0933390617" readonly>
+                </div>
+                <div class="profile_info_item">
+                    <label>Địa chỉ:</label>
+                    <textarea readonly>123 Đường ABC, Phường nguyễn trãi, Quận 1, TP.HCM</textarea>
+                </div>
+                <button class="edit_profile_button">Chỉnh sửa</button>
+            </div>
+
+           <div id="orders" class="profile_section">
+  <h2>Đơn hàng của tôi</h2>
+  <div id="orders_list"></div> <!-- nơi inject đơn hàng -->
+</div>
+
+
+            <div id="settings" class="profile_section">
+                <h2>Cài đặt tài khoản</h2>
+                <div class="setting_item">
+                    <label>Đổi mật khẩu:</label>
+                    <button>Đổi mật khẩu</button>
+                </div>
+                <div class="setting_item">
+                    <label>Cài đặt thông báo:</label>
+                    <input type="checkbox" id="email_noti" checked>
+                    <label for="email_noti">Nhận thông báo qua Email</label>
+                </div>
+                <button class="save_settings_button">Lưu cài đặt</button>
+            </div>
+
+            <div id="logout" class="profile_section">
+                <h2>Đăng xuất</h2>
+                <p>Bạn có chắc chắn muốn đăng xuất khỏi tài khoản của mình?</p>
+                <button class="logout_button">Đăng xuất ngay</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer_left">
+            <p class="introduce">SM FASHION DEIGN </p>
+            <p>Style is a way to say who you are.</p>
+            <p>Hotline: 1900 6750</p>
+            <p>Email: Fashion8386@gmail.com</p>
+        </div>
+        <div class="footer_middle">
+            <p class="connection">Kết nối với chúng tôi</p>
+            <i class="fab fa-facebook icon_connection"></i>
+            <i class="fab fa-twitter icon_connection"></i>
+            <i class="fab fa-google icon_connection"></i>
+            <i class="fab fa-instagram icon_connection icon_instagram"></i>
+            <i class="fab fa-youtube icon_connection icon_youtube"></i>
+        </div>
+        <div class="footer_right">
+            <p class="payment">Phương thức thanh toán</p>
+            <img class="payment_icon" src="../image/icons/i_payment.webp">
+        </div>
+    </div>
+
+    <script src="../scripts/share/header.js"></script>
+    <script>
+        // JavaScript để chuyển đổi giữa các tab trong hồ sơ
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuItems = document.querySelectorAll('.profile_menu li');
+            const sections = document.querySelectorAll('.profile_section');
+
+            menuItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    // Xóa class 'active' khỏi tất cả menu item và section
+                    menuItems.forEach(i => i.classList.remove('active'));
+                    sections.forEach(s => s.classList.remove('active'));
+
+                    // Thêm class 'active' vào menu item được click
+                    item.classList.add('active');
+
+                    // Hiển thị section tương ứng
+                    const targetSectionId = item.dataset.section;
+                    const targetSection = document.getElementById(targetSectionId);
+                    if (targetSection) {
+                        targetSection.classList.add('active');
+                    }
+
+                    // Xử lý nút Đăng xuất (ví dụ đơn giản)
+                    if (targetSectionId === 'logout') {
+                        const logoutBtn = document.querySelector('.logout_button');
+                        if (logoutBtn) {
+                            logoutBtn.addEventListener('click', () => {
+                                // Xoá trạng thái đăng nhập
+                                localStorage.removeItem('isLoggedIn');
+                                localStorage.removeItem('userRole');
+                                
+                                alert('Bạn đã đăng xuất thành công!');
+                                window.location.href = 'Taibel.html'; // Chuyển về trang chủ
+                            });
+                        }
+                    }
+                    
+
+
+                     // Thêm chức năng chỉnh sửa thông tin cá nhân
+                    if (targetSectionId === 'info') {
+                        const editButton = document.querySelector('.edit_profile_button');
+                        const inputs = document.querySelectorAll('#info input, #info textarea');
+
+                        editButton.addEventListener('click', () => {
+                            if (editButton.textContent === 'Chỉnh sửa') {
+                                inputs.forEach(input => input.removeAttribute('readonly'));
+                                editButton.textContent = 'Lưu thay đổi';
+                                editButton.style.backgroundColor = '#28a745'; // Màu xanh cho nút lưu
+                            } else {
+                                inputs.forEach(input => input.setAttribute('readonly', true));
+                                alert('Thông tin đã được lưu (chức năng lưu vào database cần backend)!');
+                                editButton.textContent = 'Chỉnh sửa';
+                                editButton.style.backgroundColor = '#007bff'; // Màu xanh dương ban đầu
+                                // Tại đây bạn sẽ gửi dữ liệu đã chỉnh sửa lên server
+                            }
+                        });
+                    }
+                });
+            });
+
+            // Gọi js_cart_quantity để cập nhật số lượng giỏ hàng trên header khi trang tải
+            js_cart_quantity();
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+  // Cập nhật số lượng giỏ hàng
+  js_cart_quantity();
+
+  // Hiển thị danh sách đơn hàng
+  const orderContainer = document.querySelector('#orders');
+  const orders = JSON.parse(localStorage.getItem('orders')) || [];
+
+  if (orders.length === 0) {
+    orderContainer.innerHTML += '<p>Không có đơn hàng nào.</p>';
+  } else {
+    orders.reverse().forEach(order => {
+      const orderHTML = `
+        <div class="order_item">
+          <div class="order_id">Mã đơn hàng: #${order.id}</div>
+          <div class="order_date">Ngày đặt: ${order.date}</div>
+          <div class="order_status">Trạng thái: ${order.status}</div>
+          <div class="order_total">Tổng tiền: ${order.total}</div>
+          <button class="view_order_detail">Xem chi tiết</button>
+        </div>
+      `;
+      orderContainer.innerHTML += orderHTML;
+    });
+  }
+});
+// Hiển thị danh sách đơn hàng
+const orderListEl = document.querySelector('#orders_list');
+const orders = JSON.parse(localStorage.getItem('orders')) || [];
+
+if (!orderListEl) {
+  console.error('Không tìm thấy phần tử #orders_list');
+} else if (orders.length === 0) {
+  orderListEl.innerHTML = '<p>Không có đơn hàng nào.</p>';
+} else {
+  orders.reverse().forEach(order => {
+    const orderHTML = `
+      <div class="order_item">
+        <div class="order_id">Mã đơn hàng: #${order.id}</div>
+        <div class="order_date">Ngày đặt: ${order.date}</div>
+        <div class="order_status">Trạng thái: ${order.status}</div>
+        <div class="order_total">Tổng tiền: ${order.total}</div>
+        <button class="view_order_detail">Xem chi tiết</button>
+      </div>
+    `;
+    orderListEl.innerHTML += orderHTML;
+  });
+}
+document.addEventListener("DOMContentLoaded", function () {
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+
+    if (isLoggedIn === "true") {
+      // Ẩn phần Đăng nhập / Đăng ký
+      const loginRegister = document.querySelector(".login_register");
+      if (loginRegister) loginRegister.style.display = "none";
+    }
+      
+     
+
+      logoutBtn.onclick = function () {
+        localStorage.removeItem("isLoggedIn");
+        localStorage.removeItem("userRole"); // nếu có
+        window.location.reload();
+      };
+});
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNOWMAN</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/products.css">
+    <link rel="stylesheet" href="../styles/general.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/general.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    .search_button{
+       height: 30px;
+    }
+  </style>
+  
+  </head>
+
+  <body>
+    
+    <div class="cosmetics_header">
+      <div class="left_header">
+        <a href="Taibel.html" class="logo_header"><img class="image_logo" src="../image/logo.webp"></a>
+       
+      </div>
+
+      <div class="middle_header"> 
+        <div class=" home_about">
+          <a style=" text-align: center;font-family:Arial, Helvetica, sans-serif; font-size: 20px;text-decoration:none;color:rgb(101, 67, 33)" 
+          href="Taibel.html" class="home_header">Trang chủ |</a>
+          <a style=" text-align: center;font-family:Arial, Helvetica, sans-serif; font-size: 20px;text-decoration:none;color:rgb(101, 67, 33)" 
+          href="comming_soon.html" class="about_header">Giới thiệu</a>
+        </div>
+        <input class="search_bar js_search_bar" placeholder="Tìm kiếm" type="text">
+        <button class="search_button js_search_button">Search</button>
+      </div>
+
+      <div class="right_header">
+        <div class=" login_register"> 
+        
+        <a style="text-decoration: none; color:rgb(101, 67, 33) ; font-size: 20px;" href="dangnhap.html" class="login_header">Đăng nhập |</a>
+        <a style="text-decoration: none; color:rgb(101, 67, 33) ; font-size: 20px;" href="dangky.html" class="register_header">Đăng ký</a>
+        
+        </div>
+          <a href="profile.html">
+            <img class="icon_profile" src="../image/icons/8eaf3963-78fa-4d71-b6c0-a46e2c32b146.png" alt="Hồ sơ">
+          </a>
+        <div>
+          <a href="cart.html" title="Giỏ hàng của bạn">
+            <img class="icon_cart" src="../image/icons/shopping-cart.svg" alt="Giỏ hàng">
+          </a>
+          <span class="cart_quantity js_cart_quantity">0</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="seacon_search_bar_container">
+      <input class="seacon_search_bar js_seacon_search_bar" placeholder="Tìm kiếm" type="text">
+      <a href="search.html"><button class="seacon_search_button js_seacon_search_button">Search</button></a>
+    </div>
+
+   
+   
+   <!-- Carousel -->
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+  <!-- Indicators/dots -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+  </div>
+  
+  <!-- The slideshow/carousel -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="../image/new.jpg" alt="Los Angeles" class="d-block" style="width:100%;height:100%;margin-top: 90px;">
+    </div>
+    <div class="carousel-item">
+      <img src="../image/z6603234844682_f7aa7473de4eed4b3b249f8360c27e22.jpg" alt="Chicago" class="d-block" style="width:100%;height:100%;margin-top: 90px;">
+    </div>
+    <div class="carousel-item">
+      <img src="../image/slider_1.webp" alt="New York" class="d-block" style="width:100%;height:100%;margin-top :90px ;">
+    </div>
+     <div class="carousel-item">
+      <img src="../image/new1.jpg" alt="New York" class="d-block" style="width:100%;height:100%;margin-top :90px ;">
+    </div>
+  </div>
+  <!-- Left and right controls/icons -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+ <!--test-->
+   <div class="category_section">
+  <h2 class="category_title">Danh mục</h2>
+  <div class="category_list">
+    <div class="category_item">
+      <a style="text-decoration: none ; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 14px;color:rgb(101, 67, 33) ;"
+         href="ao-kieu.html" class="js_category_link" data-category="ao-kieu">
+        <img src="../image/icons/ao.webp" alt="Áo Kiểu">
+        <p>Áo Kiểu</p>
+      </a>
+    </div>
+    <div class="category_item">
+      <a style="text-decoration: none ; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 14px;color:rgb(101, 67, 33) ;"
+         href="dam.html" class="js_category_link" data-category="dam">
+        <img src="../image/icons/dam.webp" alt="Đầm">
+        <p>Đầm</p>
+      </a>
+    </div>
+    <div class="category_item">
+      <a style="text-decoration: none ; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 14px;color:rgb(101, 67, 33) ;"
+         href="quan.html" class="js_category_link" data-category="quan">
+        <img src="../image/icons/quan.webp" alt="Quần">
+        <p>Quần</p>
+      </a>
+    </div>
+    <div class="category_item">
+      <a style="text-decoration: none ; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 14px;color:rgb(101, 67, 33) ;"
+         href="vay.html" class="js_category_link" data-category="vay">
+        <img src="../image/icons/vay.webp" alt="Váy">
+        <p>Váy</p>
+      </a>
+    </div>
+    <div class="category_item">
+      <a style="text-decoration: none ; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 14px;color:rgb(101, 67, 33) ;"
+         href="giay.html" class="js_category_link" data-category="giay">
+        <img src="../image/icons/giay.webp" alt="Giày">
+        <p>Giày</p>
+      </a>
+    </div>
+  </div>
+</div>
+
+    <div class="main_name_product">
+      <hr class="hr_main_name_right">
+      <span class="main_name">SẢN PHẨM NỔI BẬT</span>
+      <hr class="hr_main_name_left">
+    </div>
+
+    <div class="cosmetics_products js_cosmetics_products">
+      
+      
+    </div>
+
+    
+
+   <div class="footer">
+      <div class="footer_left">
+        <p class="introduce">SM FASHION DEIGN </p>
+          Style is a way to say who you are.</p>
+        <p>Hotline: 1900 6750</p>
+        <p>Email: Fashion8386@gmail.com</p>
+      </div>
+
+      <div class="footer_middle">
+        <p class="connection">Kết nối với chúng tôi</p>
+        <i class="fab fa-facebook icon_connection"></i>
+        <i class="fab fa-twitter icon_connection"></i>
+        <i class="fab fa-google icon_connection"></i>
+        <i class="fab fa-instagram icon_connection icon_instagram"></i>
+        <i class="fab fa-youtube icon_connection icon_youtube"></i>
+      </div>
+
+      <div class="footer_right">
+        <p class="payment">Phương thức thanh toán</p>
+        <img class="payment_icon" src="../image/icons/i_payment.webp">
+      </div>
+    </div>
+
+
+    <script type="module" src="../scripts/Taibel.js" defer></script>
+    <script type="module" src="../scripts/share/header.js" defer></script>
+  
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+
+    if (isLoggedIn === "true") {
+      // Ẩn phần Đăng nhập / Đăng ký
+      const loginRegister = document.querySelector(".login_register");
+      if (loginRegister) loginRegister.style.display = "none";
+
+      
+     
+
+      logoutBtn.onclick = function () {
+        localStorage.removeItem("isLoggedIn");
+        localStorage.removeItem("userRole"); // nếu có
+        window.location.reload();
+      };
+
+      // Thêm nút vào ngay TRƯỚC icon profile
+      const profileIcon = document.querySelector(".icon_profile");
+      if (profileIcon && profileIcon.parentElement) {
+        profileIcon.parentElement.insertAdjacentElement("beforebegin", logoutBtn);
+      }
+    } else {
+      // Nếu chưa đăng nhập thì vẫn hiển thị phần Đăng nhập / Đăng ký
+      const loginRegister = document.querySelector(".login_register");
+      if (loginRegister) loginRegister.style.display = "block";
+    }
+  });
+</script>
+
+
+
+
+  </body>
+</html>

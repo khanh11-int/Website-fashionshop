@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
+    <title>Admin</title>
+</head>
+<body>
+    <section class="admin-content">
+        <div class="container">
+            <div class="row-grid">
+                <div class="admin-conten-sidebar">
+                    <div class="admin-logo">
+                        <a href="quantri.html"><img src="..\image\logo.webp" alt=""></a>
+                    </div>
+                    <div class="admin-sidebbar">
+                        <ul>
+                            <li>
+                                <a href="">Danh Mục<i class="ri-add-box-line"></i></a>
+                                <ul>
+                                    <div class="menu-sub-wraper">
+                                        <li><a href="#"><i class="ri-arrow-drop-right-fill"></i>Thêm Danh Mục</a></li>
+                                        <li><a href="#"><i class="ri-arrow-drop-right-fill"></i>Danh Sách Danh Mục</a></li>
+                                    </div>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="">Sản Phẩm<i class="ri-add-box-line"></i></a>
+                                <ul>
+                                    <div class="menu-sub-wraper">
+                                        <li><a href="product_add.html"><i class="ri-arrow-drop-right-fill"></i>Thêm Sản Phẩm</a></li>
+                                        <li><a href="product_list.html"><i class="ri-arrow-drop-right-fill"></i>Danh Sách Sản Phẩm</a></li>
+                                    </div>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="admin-conten-main">
+                    <div class="search-container">
+                        <input type="text" name="keyword" placeholder="Tìm sản phẩm..." value="">
+                        <button type="submit">
+                            <i class="fa fa-search"></i> Tìm kiếm
+                        </button>
+                    </div>
+                  <table id="product-table">
+                     <thead>
+                        <tr>
+                            <th>Stt</th>
+                            <th>Tên Sản Phẩm</th>
+                            <th>Giá Sản Phẩm</th>
+                            <th>Ảnh Sản Phẩm</th>
+                            <th>Tùy Chọn</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        </tbody>
+                  </table>
+                </div>
+            </div> 
+        </div>
+    </section>
+    <script src="../scripts/main.js"></script>
+    <script src="../data/products.js"></script>
+
+    <script type="module">
+        import { products } from '../data/products.js'; // Import the products array
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const productTableBody = document.querySelector('#product-table tbody'); // Select the tbody element
+            if (productTableBody) {
+                products.forEach((product, index) => { // Iterate over each product in the array
+                    const row = document.createElement('tr'); // Create a new table row
+
+                    row.innerHTML = `
+                        <td>${index + 1}</td>
+                        <td>${product.name}</td>
+                        <td>${product.price.toLocaleString('vi-VN')}<sup>đ</sup></td>
+                        <td>
+                            <img style="width:70px;" src="${product.image}" alt="${product.name}">
+                        </td>
+                        <td>
+                            <a class="edit-btn" href="../html/product_edit.html?id=${product.id}">Sửa</a>|<a class="delete-btn" href="#" data-product-id="${product.id}">Xóa</a>
+                        </td>
+                    `;
+                    productTableBody.appendChild(row); // Append the row to the table body
+                });
+            } else {
+                console.error('Table body not found!');
+            }
+        });
+    </script>
+</body>
+</html>

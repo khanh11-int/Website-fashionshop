@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng nhập</title>
+  <link rel="stylesheet" href="..\styles\log.css">
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-left">
+      <a href="Taibel.html"> 
+         <img src="..\image\logo.webp" alt="SNSN">
+     </a>
+    </div>
+    <div class="login-right">
+      <h2>Đăng nhập</h2>
+      <form>
+        <input type="text" placeholder="Email/Số điện thoại/Tên đăng nhập" required>
+        <input type="password" placeholder="Mật khẩu" required>
+        <button type="submit">ĐĂNG NHẬP</button>
+        <div class="login-options">
+          <a href="#">Quên mật khẩu</a>
+          <span>|</span>
+          <a href="#">Đăng nhập với SMS</a>
+        </div>
+        <div class="login-socials">
+          <p>Hoặc</p>
+          <button class="fb">Facebook</button>
+          <button class="gg">Google</button>
+        </div>
+        <div class="signup">
+          <p>Bạn mới biết đến SnowMan? <a href="dangky.html">Đăng ký</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+<script>
+  document.querySelector("form").addEventListener("submit", function (event) {
+    event.preventDefault(); // Ngăn hành vi submit mặc định
+
+    // Lấy giá trị từ các trường nhập liệu
+    const usernameInput = document.querySelector("input[type='text']").value;
+    const passwordInput = document.querySelector("input[type='password']").value;
+
+    // Định nghĩa tài khoản admin và người dùng thông thường
+    const adminUsername = "admin"; // Tên đăng nhập admin
+    const adminPassword = "123@"; // Mật khẩu admin
+
+    const validUsernames = ["tranbao", "0933390617", "tranbao180305@gmail.com"]; // Các tài khoản người dùng thông thường
+    const validPassword = "123@"; // Mật khẩu chung cho người dùng thông thường
+
+    if (usernameInput === adminUsername && passwordInput === adminPassword) {
+        alert("Đăng nhập với tư cách admin thành công!");
+        window.location.href = "quantri.html"; // Chuyển hướng đến trang admin
+    } else if (validUsernames.includes(usernameInput) && passwordInput === validPassword) {
+        alert("Đăng nhập thành công!");
+        window.location.href = "Taibel.html"; // Chuyển hướng đến trang người dùng
+    } else {
+        alert("Tên đăng nhập hoặc mật khẩu không đúng. Vui lòng thử lại.");
+    }
+ 
+  if (usernameInput === adminUsername && passwordInput === adminPassword) {
+   
+    localStorage.setItem("isLoggedIn", "true"); // ✅ Lưu trạng thái
+    localStorage.setItem("userRole", "admin");  // (Tuỳ chọn) lưu vai trò
+    window.location.href = "quantri.html";
+} else if (validUsernames.includes(usernameInput) && passwordInput === validPassword) {
+    
+    localStorage.setItem("isLoggedIn", "true"); // ✅ Lưu trạng thái
+    localStorage.setItem("userRole", "user");   // (Tuỳ chọn) lưu vai trò
+    window.location.href = "Taibel.html";
+}
+ });
+localStorage.setItem("isLoggedIn", "true");
+
+  
+  
+</script>
+</html>

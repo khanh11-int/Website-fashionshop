@@ -1,0 +1,269 @@
+/* Kiểu dáng cho container chính của trang hồ sơ */
+.main_profile_container {
+    display: flex;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 50px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-height: 600px; /* Đảm bảo chiều cao đủ lớn */
+}
+
+/* Kiểu dáng cho sidebar (menu bên trái) */
+.profile_sidebar {
+    width: 250px;
+    padding: 20px;
+    border-right: 1px solid #eee;
+    background-color: #f9f9f9;
+    border-radius: 8px 0 0 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile_avatar {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile_avatar img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgb(133, 94, 66) ;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile_name {
+    margin-top: 10px;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #333;
+}
+
+.profile_menu {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.profile_menu li {
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #555;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.profile_menu li i {
+    margin-right: 10px;
+    color: rgb(133, 94, 66) ;
+}
+
+.profile_menu li:hover {
+    background-color: #e9f0ff;
+    color: rgb(133, 94, 66) ;
+}
+
+.profile_menu li.active {
+    background-color: rgb(133, 94, 66) ;
+    color: #fff;
+    font-weight: bold;
+}
+
+.profile_menu li.active i {
+    color: #fff;
+}
+
+/* Kiểu dáng cho nội dung chính của hồ sơ */
+.profile_content {
+    flex-grow: 1;
+    padding: 20px 30px;
+}
+
+.profile_section {
+    display: none; /* Mặc định ẩn tất cả các section */
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.profile_section.active {
+    display: block; /* Chỉ hiển thị section đang active */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.profile_content h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* Kiểu dáng cho các item thông tin cá nhân */
+.profile_info_item {
+    margin-bottom: 20px;
+}
+
+.profile_info_item label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.profile_info_item input[type="text"],
+.profile_info_item input[type="email"],
+.profile_info_item input[type="tel"],
+.profile_info_item textarea {
+    width: calc(100% - 20px);
+    padding: 12px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+.profile_info_item input:focus,
+.profile_info_item textarea:focus {
+    border-color: rgb(133, 94, 66) ;
+    outline: none;
+}
+
+.profile_info_item textarea {
+    resize: vertical; /* Cho phép thay đổi kích thước theo chiều dọc */
+    min-height: 80px;
+}
+
+/* Kiểu dáng cho nút chỉnh sửa/lưu */
+.edit_profile_button, .save_settings_button, .logout_button {
+    background-color: rgb(133, 94, 66) ;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.edit_profile_button:hover, .save_settings_button:hover, .logout_button:hover {
+    background-color: #0056b3;
+}
+
+/* Kiểu dáng cho mục đơn hàng */
+.order_item {
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #fcfcfc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.order_item div {
+    margin-bottom: 5px;
+    color: #444;
+}
+
+.order_id {
+    font-weight: bold;
+    color: rgb(133, 94, 66) ;
+}
+
+.order_status {
+    font-style: italic;
+    color: #6c757d;
+}
+
+.order_total {
+    font-weight: bold;
+    color: #28a745; /* Màu xanh cho tổng tiền */
+}
+
+.view_order_detail {
+    background-color: #6c757d;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.view_order_detail:hover {
+    background-color: #5a6268;
+}
+
+/* Kiểu dáng cho cài đặt tài khoản */
+.setting_item {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.setting_item label {
+    margin-right: 15px;
+    font-weight: bold;
+    color: #555;
+}
+
+.setting_item button {
+    background-color: #ffc107;
+    color: #333;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.setting_item button:hover {
+    background-color: #e0a800;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .main_profile_container {
+        flex-direction: column;
+        margin: 20px auto;
+        padding: 10px;
+    }
+
+    .profile_sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #eee;
+        border-radius: 8px 8px 0 0;
+        padding-bottom: 0;
+    }
+
+    .profile_menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .profile_menu li {
+        margin: 5px 10px;
+        padding: 10px 15px;
+    }
+
+    .profile_content {
+        padding: 20px 15px;
+    }
+}

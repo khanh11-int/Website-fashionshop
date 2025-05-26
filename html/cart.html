@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Giỏ hàng</title>
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/cart.css">
+    <link rel="stylesheet" href="../styles/general.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <div class="cosmetics_header">
+      <div class="left_header">
+        <a href="Taibel.html" class="logo_header"><img class="image_logo" src="../image/logo.webp"></a>
+      </div>
+
+      <div class="middle_header">
+         <div class=" home_about">
+          <a style=" text-align: center;font-family:Arial, Helvetica, sans-serif; font-size: 20px;text-decoration:none;color:rgb(101, 67, 33)" 
+          href="Taibel.html" class="home_header">Trang chủ |</a>
+          <a style=" text-align: center;font-family:Arial, Helvetica, sans-serif; font-size: 20px;text-decoration:none;color:rgb(101, 67, 33)" 
+          href="comming_soon.html" class="about_header">Giới thiệu</a>
+        </div>
+        <input class="search_bar js_search_bar" placeholder="Tìm kiếm" type="text">
+        <button class="search_button js_search_button">Search</button>
+      </div>
+
+      <div class="right_header">
+        <a href="profile.html">
+        <img class="icon_profile" src="../image/icons/8eaf3963-78fa-4d71-b6c0-a46e2c32b146.png" alt="Hồ sơ">
+        </a>
+        <div>
+          <a href="cart.html" title="Giỏ hàng của bạn">
+            <img class="icon_cart" src="../image/icons/shopping-cart.svg" alt="Giỏ hàng">
+          </a>
+          <span class="cart_quantity js_cart_quantity">0</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="seacon_search_bar_container">
+      <input class="seacon_search_bar js_seacon_search_bar" placeholder="Tìm kiếm" type="text">
+      <a href="search.html"><button class="seacon_search_button js_seacon_search_button">Search</button></a>
+    </div>
+
+
+    <div class="main_of_cart">
+      <div class="yourCart">
+        <div class="cart_title">
+          <span class="cart_title_name">Giỏ hàng của bạn </span> <span class="cart_title_quantity js_cart_title_quantity">(3 sản phẩm)</span>
+        </div>
+        <div class="none_cart">Không có sản phẩm nào trong giỏ hàng. Quay lại <a class="text_store" href="Taibel.html">cửa hàng</a> để tiếp tục mua sắm.</div>
+        <div class="cart_taskbar">
+          <div class="left_cart_taskbar">
+            Sản phẩm
+          </div>
+          <div class="right_cart_taskbar">
+            <div class="cart_taskbar_price">Giá</div>
+            <div class="cart_taskbar_quantity">Số lượng</div>  
+            <div class="cart_taskbar_total">Thành tiền</div>
+          </div>
+        </div>
+
+        <div class="js_cart_product">
+          <div class="cart_product">
+            <div class="left_cart_product">
+              <div class="cart_picture">
+                <img class="cart_product_picture" src="../image/products/Set Bộ Nữ Vải Linen Cao Cấp Charmy Design.webp">
+              </div>
+              <div class="cart_name_and_delbtn">
+                <div class="cart_name">Set Bộ Nữ Vải Linen Cao Cấp Charmy Design</div>
+                <div><span class="delete_button"><i class="fa-solid fa-trash-can"></i> Xóa sản phẩm</span></div>
+              </div>
+            </div>
+            
+            <div class="right_cart_product">
+              <div class="cart_price_of_taskbar">148.000₫</div>
+              <div class="quantity_control">
+                <button class="minus_button">-</button>
+                <span class="quantity">2</span>
+                <button class="plus_button">+</button>
+              </div>  
+              <div class="cart_total_of_taskbar">338.000₫</div>
+            </div>
+          </div>
+        </div>
+        
+
+      </div>
+
+
+      <div class="cart_summary">
+        <div class="item_summary">
+          <div class="item_summary_name js_item_summary_name">
+            Sản phẩm(2):
+          </div>
+          <div class="item_summary_money js_item_summary_money">
+            4.631.000₫
+          </div>
+        </div>
+
+        <div class="total_summary">
+          <div class="total_summary_name">
+            Thành tiền:
+          </div>
+          <div class="total_summary_money js_total_summary_money">
+            4.631.000₫
+          </div>
+        </div>
+
+        <div class="pay_summary">
+          <a href="thanhtoan.html">
+             <button class="pay_button">Tiến hành thanh toán</button>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+
+
+
+    <div class="footer">
+      <div class="footer_left">
+        <p class="introduce">SM FASHION DEIGN </p>
+          Style is a way to say who you are.</p>
+        <p>Hotline: 1900 6750</p>
+        <p>Email: Fashion8386@gmail.com</p>
+      </div>
+
+      <div class="footer_middle">
+        <p class="connection">Kết nối với chúng tôi</p>
+        <i class="fab fa-facebook icon_connection"></i>
+        <i class="fab fa-twitter icon_connection"></i>
+        <i class="fab fa-google icon_connection"></i>
+        <i class="fab fa-instagram icon_connection icon_instagram"></i>
+        <i class="fab fa-youtube icon_connection icon_youtube"></i>
+      </div>
+
+      <div class="footer_right">
+        <p class="payment">Phương thức thanh toán</p>
+        <img class="payment_icon" src="../image/icons/i_payment.webp">
+      </div>
+    </div>
+
+
+    <script type="module" src="../scripts/checkout.js" type="module"></script>
+    <script type="module" src="../scripts/share/header.js" defer></script>
+  </body>
+</html>
